@@ -60,15 +60,15 @@ periph_soc 从所有外设读取来的数据，并不走RAM过，而是直接传
 - keyb\_mouse/keyb\_fifo: 用于处理PS2
 - the\_fstore: 用于VGA的图像输出，内涵一个双端口RAM和一个文字转换模块，将一个ASCII转成相应大小的图像
 
-####uart
-- uart\_rx\_fifo/uart\tx\_fifo: 收发fifo
+#### uart
+- uart\_rx\_fifo/uart\_tx\_fifo: 收发fifo
 - i\_uart: uart 状态机
 - rx\_delay: 延迟模块
 
-####SD卡
+#### SD卡
 - sd\_top: 读写口直接接输入/输出，SD的读写不走存储器，而是直接从periph_soc给一根终端信号到rocket，直接从SD卡读数据
 
-####以太网
+#### 以太网
 - framing\_top
 由于物理层的处理已经集成在开发板上，所以这里FPGA的接口实际上是MAC和PHY层之间的接口信号，具体信号的意义可见[以太网信号解析](https://blog.csdn.net/zcshoucsdn/article/details/80090802#comments)。
 
